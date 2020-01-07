@@ -9,6 +9,10 @@
 
 
 ## Run the programm
+* make proto file in python language
+    * `protoc --python_out=. todo.proto`
+* make proto file in go language
+    * `protoc --go_out=. todo.proto`    
 * `go install ./cmd/todo`
 * `todo add SOMETEXT`
 * `todo list`
