@@ -1,4 +1,4 @@
-# go-todo
+# gRPC-todo
 #### This is a TODO app based on go lang and gRPC protocol
 
 ## pre-requirements
