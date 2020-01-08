@@ -9,13 +9,15 @@
 
 
 ## Run the programm
-* make proto file in python language
-    * `protoc --python_out=. todo.proto`
 * make proto file in go language
-    * `protoc --go_out=. todo.proto`    
-* `go install ./cmd/todo`
-* `todo add SOMETEXT`
-* `todo list`
+    * `protoc -I . todo.proto --python_out=plugins=grpc:.`    
+* To run server
+   * `cd ./cmd/server && go build` (`cd` used to server be in same folder ad db file)
+   * `mv server ../.. && ./server`
+* To run client
+   * `cd ./cmd/todo`
+   * `go run main.go list` (this option maybe not work; There is a problem in server side)
+   * `go run main.go add SOMETEXT`
 
 ## See What is in db
 * `hexdump -c mydb.pb`
