@@ -10,7 +10,7 @@
 
 ## Run the programm
 * make proto file in go language
-    * `protoc -I . todo.proto --python_out=plugins=grpc:.`    
+    * `protoc -I . todo.proto --go_out=plugins=grpc:.`    
 * To run server
    * `cd ./cmd/server && go build` (`cd` used to server be in same folder ad db file)
    * `mv server ../.. && ./server`
