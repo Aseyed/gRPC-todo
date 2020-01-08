@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='todo.proto',
   package='todo',
   syntax='proto3',
-  serialized_pb=_b('\n\ntodo.proto\x12\x04todo\"\"\n\x04Task\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0c\n\x04\x64one\x18\x02 \x01(\x08\"%\n\x08TaskList\x12\x19\n\x05tasks\x18\x01 \x03(\x0b\x32\n.todo.Task\"\x06\n\x04Void2+\n\x05Tasks\x12\"\n\x04list\x12\n.todo.Void\x1a\x0e.todo.TaskListb\x06proto3')
+  serialized_pb=_b('\n\ntodo.proto\x12\x04todo\"\"\n\x04Task\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0c\n\x04\x64one\x18\x02 \x01(\x08\"%\n\x08TaskList\x12\x19\n\x05tasks\x18\x01 \x03(\x0b\x32\n.todo.Task\"\x14\n\x04Text\x12\x0c\n\x04text\x18\x01 \x01(\t\"\x06\n\x04Void2N\n\x05Tasks\x12$\n\x04List\x12\n.todo.Void\x1a\x0e.todo.TaskList\"\x00\x12\x1f\n\x03\x41\x64\x64\x12\n.todo.Text\x1a\n.todo.Task\"\x00\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -95,6 +95,37 @@ _TASKLIST = _descriptor.Descriptor(
 )
 
 
+_TEXT = _descriptor.Descriptor(
+  name='Text',
+  full_name='todo.Text',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='text', full_name='todo.Text.text', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=95,
+  serialized_end=115,
+)
+
+
 _VOID = _descriptor.Descriptor(
   name='Void',
   full_name='todo.Void',
@@ -114,13 +145,14 @@ _VOID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=95,
-  serialized_end=101,
+  serialized_start=117,
+  serialized_end=123,
 )
 
 _TASKLIST.fields_by_name['tasks'].message_type = _TASK
 DESCRIPTOR.message_types_by_name['Task'] = _TASK
 DESCRIPTOR.message_types_by_name['TaskList'] = _TASKLIST
+DESCRIPTOR.message_types_by_name['Text'] = _TEXT
 DESCRIPTOR.message_types_by_name['Void'] = _VOID
 
 Task = _reflection.GeneratedProtocolMessageType('Task', (_message.Message,), dict(
@@ -136,6 +168,13 @@ TaskList = _reflection.GeneratedProtocolMessageType('TaskList', (_message.Messag
   # @@protoc_insertion_point(class_scope:todo.TaskList)
   ))
 _sym_db.RegisterMessage(TaskList)
+
+Text = _reflection.GeneratedProtocolMessageType('Text', (_message.Message,), dict(
+  DESCRIPTOR = _TEXT,
+  __module__ = 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.Text)
+  ))
+_sym_db.RegisterMessage(Text)
 
 Void = _reflection.GeneratedProtocolMessageType('Void', (_message.Message,), dict(
   DESCRIPTOR = _VOID,
